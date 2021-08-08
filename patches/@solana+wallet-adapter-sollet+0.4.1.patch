@@ -1,0 +1,12 @@
+diff --git a/node_modules/@solana/wallet-adapter-sollet/lib/adapter.js b/node_modules/@solana/wallet-adapter-sollet/lib/adapter.js
+index b16ac71..684e30b 100644
+--- a/node_modules/@solana/wallet-adapter-sollet/lib/adapter.js
++++ b/node_modules/@solana/wallet-adapter-sollet/lib/adapter.js
+@@ -12,6 +12,7 @@ import { EventEmitter, WalletAdapterNetwork, WalletConnectionError, WalletDiscon
+ export class SolletWalletAdapter extends EventEmitter {
+     constructor(config) {
+         super();
++        console.log("in sollet constructor")
+         this._disconnected = () => {
+             const wallet = this._wallet;
+             if (wallet) {
